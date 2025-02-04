@@ -10,18 +10,25 @@
             background-color: #000;
             color: white;
             text-align: center;
+            margin: 0;
+            padding: 0;
         }
         .section {
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 50px;
-            border-bottom: 2px solid red;
+            padding: 60px;
+            border-bottom: 3px solid red;
+            margin: 20px;
+            border-radius: 10px;
+            background-color: rgba(255, 0, 0, 0.1);
         }
         .section img {
             width: 40%;
             max-width: 500px;
-            margin: 20px;
+            margin: 30px;
+            border: 3px solid white;
+            border-radius: 10px;
         }
         .section:nth-child(even) {
             flex-direction: row-reverse;
@@ -32,42 +39,67 @@
             color: yellow;
         }
     </style>
+    <script>
+        function countdown() {
+            const targetDate = new Date("2024-12-31T23:59:59").getTime();
+            setInterval(function() {
+                const now = new Date().getTime();
+                const timeLeft = targetDate - now;
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+                document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            }, 1000);
+        }
+        window.onload = countdown;
+    </script>
 </head>
 <body>
     <header>
-        <img src="spiderman-heroes.jpg" alt="Spider-Man Heroes">
+        <img src="images/spiderman-heroes.jpg" alt="Spider-Man Heroes">
         <h1>Marvel’s Spider-Man: Una Aventura Increíble</h1>
     </header>
     
     <div class="section">
-        <img src="spiderman-game.jpg" alt="Spider-Man Juego">
-        <p>Los juegos de Spider-Man para PS4 y PS5 han revolucionado la manera en que vivimos la experiencia del superhéroe. Con una historia emocionante y una jugabilidad fluida, seguimos la vida de Peter Parker y Miles Morales mientras enfrentan desafíos personales y amenazas como Kingpin, Mister Negative y el icónico Venom.</p>
+        <img src="images/spiderman-game.jpg" alt="Spider-Man Juego">
+        <p>Los juegos de Spider-Man para PS4 y PS5 han revolucionado la manera en que vivimos la experiencia del superhéroe. La saga comienza con Peter Parker enfrentando una de sus mayores amenazas: Wilson Fisk, alias Kingpin, y posteriormente al misterioso Mister Negative. Con una jugabilidad fluida, un sistema de combate espectacular y una historia profunda, el juego ha capturado la esencia del héroe.
+        <br><br>
+        En Spider-Man: Miles Morales, seguimos a Miles mientras aprende a usar sus nuevas habilidades bioeléctricas. Su historia es un reflejo de crecimiento y responsabilidad, mientras enfrenta amenazas como The Tinkerer y su grupo Underground. Ambos juegos han sido aclamados por su narrativa, gráficos y mecánicas de mundo abierto.</p>
     </div>
     
     <div class="section">
-        <img src="peter-parker.jpg" alt="Peter Parker">
-        <p>Peter Parker, el Spider-Man original, es un héroe experimentado en estos juegos. Trabaja con el Dr. Otto Octavius y enfrenta numerosos desafíos, desde la traición de su mentor hasta la amenaza de los Seis Siniestros.</p>
+        <img src="images/peter-parker.jpg" alt="Peter Parker">
+        <p>Peter Parker, el Spider-Man original en esta saga de videojuegos, es un héroe experimentado que lleva años luchando contra el crimen en Nueva York. Trabaja con el Dr. Otto Octavius, quien posteriormente se convierte en Doctor Octopus, uno de sus mayores enemigos. Peter también enfrenta dilemas personales, como su relación con Mary Jane Watson y su responsabilidad con su tía May.
+        <br><br>
+        A lo largo del juego, Peter debe detener la amenaza de los Seis Siniestros, un grupo de villanos liderados por Octavius. La historia muestra su crecimiento como héroe y cómo enfrenta pérdidas personales significativas, consolidándolo como un personaje con gran profundidad emocional.</p>
     </div>
     
     <div class="section">
-        <img src="miles-morales.jpg" alt="Miles Morales">
-        <p>Miles Morales es el segundo Spider-Man, con habilidades únicas como la bioelectricidad. Su historia muestra su crecimiento como héroe, enfrentando amenazas como el grupo Underground y su lucha por encontrar su propio camino.</p>
+        <img src="images/miles-morales.jpg" alt="Miles Morales">
+        <p>Miles Morales es el segundo Spider-Man en este universo, con habilidades únicas como la bioelectricidad y la invisibilidad. Tras la aparente muerte de Peter durante un viaje, Miles debe asumir la responsabilidad de proteger la ciudad por su cuenta. Su historia se centra en el descubrimiento de su identidad como héroe y en la lucha contra el grupo Underground.
+        <br><br>
+        Miles enfrenta la traición de personas cercanas y la difícil decisión de priorizar su deber como Spider-Man sobre su vida personal. Su evolución como personaje y su estilo de combate lo diferencian de Peter, dándole una identidad propia en el universo de los videojuegos.</p>
     </div>
     
     <div class="section">
-        <img src="spiderman-suits.jpg" alt="Trajes de Spider-Man">
-        <p>Los trajes en estos juegos no solo son estéticamente impresionantes, sino que también brindan habilidades únicas. Peter y Miles pueden desbloquear trajes emblemáticos que ofrecen mejoras en combate, sigilo y movilidad.</p>
+        <img src="images/spiderman-suits.jpg" alt="Trajes de Spider-Man">
+        <p>Los juegos presentan una gran variedad de trajes para Peter y Miles, cada uno con habilidades únicas. Desde el icónico traje clásico hasta versiones avanzadas con tecnología Stark, los jugadores pueden desbloquear trajes con mejoras en combate y movilidad. 
+        <br><br>
+        Miles también cuenta con trajes únicos, como el de Spider-Verse, que imita la animación de la película, y el Traje 2099. Estos trajes no solo aportan estilo, sino que también afectan la jugabilidad con nuevas mecánicas y efectos visuales impresionantes.</p>
     </div>
     
     <div class="section">
-        <img src="venom.jpg" alt="Venom">
-        <p>Venom es el villano final de Spider-Man 2, encarnado en Harry Osborn. Su presencia es devastadora, forzando a Peter y Miles a unir fuerzas para detener su amenaza mientras lidian con el impacto personal del simbionte.</p>
+        <img src="images/venom.jpg" alt="Venom">
+        <p>Venom es el villano final de Spider-Man 2, encarnado en Harry Osborn tras su infección con el simbionte. Su aparición introduce una mecánica de juego oscura donde Peter se ve afectado por el simbionte, ganando habilidades pero perdiendo el control. 
+        <br><br>
+        Eventualmente, Peter y Miles deben enfrentarse a Venom en una de las batallas más épicas de la saga. Con habilidades destructivas y una historia llena de giros, la inclusión de Venom ha sido uno de los momentos más impactantes del juego.</p>
     </div>
     
     <div class="section">
         <h2>¡Sorteo de una PS5 con Spider-Man 2!</h2>
         <p>Participa en nuestro sorteo y gana una PlayStation 5 con Marvel’s Spider-Man 2.</p>
-        <div class="countdown">00:00:00</div>
+        <div id="countdown" class="countdown"></div>
     </div>
 </body>
 </html>
