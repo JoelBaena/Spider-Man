@@ -13,6 +13,16 @@
             margin: 0;
             padding: 0;
         }
+        header {
+            position: relative;
+            text-align: center;
+        }
+        header img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            display: block;
+        }
         .section {
             display: flex;
             align-items: center;
@@ -41,7 +51,7 @@
     </style>
     <script>
         function countdown() {
-            const targetDate = new Date("2024-12-31T23:59:59").getTime();
+            const targetDate = new Date("2025-03-01T00:00:00").getTime();
             setInterval(function() {
                 const now = new Date().getTime();
                 const timeLeft = targetDate - now;
