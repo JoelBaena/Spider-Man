@@ -16,15 +16,22 @@
         header {
             position: relative;
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
         }
-        header img {
+        .header-container {
+            display: inline-block;
+            border: 3px solid white;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .header-container img {
             width: 100%;
             max-height: 400px;
             object-fit: cover;
             display: block;
-            border: 3px solid white; /* Se ajusta el borde a la imagen */
-            border-radius: 10px;
-            box-sizing: border-box; /* Evita que el borde haga crecer la imagen */
         }
         .section {
             display: flex;
@@ -70,7 +77,9 @@
 </head>
 <body>
     <header>
-        <img src="images/spiderman-heroes.jpg" alt="Spider-Man Heroes">
+        <div class="header-container">
+            <img src="images/spiderman-heroes.jpg" alt="Spider-Man Heroes">
+        </div>
         <h1>Marvel’s Spider-Man: Una Aventura Increíble</h1>
     </header>
     
