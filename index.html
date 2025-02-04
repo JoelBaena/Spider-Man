@@ -3,125 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spider-Man - Trilogía de PS4 y PS5</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Marvel’s Spider-Man Landing Page</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #000;
-            color: #fff;
+            color: white;
             text-align: center;
         }
-        .hero {
-            background: url('images/spiderman-hero.jpg') no-repeat center center/cover;
-            padding: 100px 20px;
-        }
-        .cta {
-            background-color: #ff0000;
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-        }
-        .content-section {
-            padding: 50px 20px;
-        }
-        .content-section img {
-            width: 100%;
-            max-width: 400px;
-        }
-        .character-section {
+        .section {
             display: flex;
-            flex-wrap: wrap;
+            align-items: center;
             justify-content: center;
-            gap: 20px;
+            padding: 50px;
+            border-bottom: 2px solid red;
         }
-        .character {
-            max-width: 300px;
-            text-align: left;
+        .section img {
+            width: 40%;
+            max-width: 500px;
+            margin: 20px;
+        }
+        .section:nth-child(even) {
+            flex-direction: row-reverse;
         }
         .countdown {
-            font-size: 24px;
+            font-size: 2em;
             font-weight: bold;
-            color: #ff0000;
-            margin-top: 20px;
+            color: yellow;
         }
     </style>
 </head>
 <body>
-    <header class="hero">
-        <h1>MARVEL'S SPIDER-MAN</h1>
-        <p>La épica trilogía de Insomniac Games en PS4 y PS5</p>
-        <a href="#comprar" class="cta">Comprar ahora</a>
+    <header>
+        <img src="spiderman-heroes.jpg" alt="Spider-Man Heroes">
+        <h1>Marvel’s Spider-Man: Una Aventura Increíble</h1>
     </header>
-
-    <section class="content-section">
-        <h2>Historia de Marvel's Spider-Man</h2>
-        <p>En esta trilogía, seguimos a Peter Parker en una Nueva York vibrante y llena de peligros. En el primer juego, enfrenta al Señor Negativo y la amenaza del grupo Inner Demons, mientras que en el segundo juego, Miles Morales toma protagonismo en su propia historia. Finalmente, en Marvel's Spider-Man 2, Peter y Miles deben unir fuerzas para derrotar a Kraven el Cazador y la amenaza simbiótica de Venom.</p>
-    </section>
-
-    <section class="content-section">
-        <h2>Biografía de Peter Parker</h2>
-        <img src="images/peter-parker.jpg" alt="Peter Parker">
-        <p>Peter Parker en la saga de videojuegos es un héroe experimentado que lleva 8 años siendo Spider-Man. Trabaja con el Dr. Otto Octavius hasta que su mentor se convierte en el Doctor Octopus. A lo largo de los juegos, Peter enfrenta grandes pérdidas, pero también forma alianzas, como con Miles Morales, quien se convierte en su aprendiz.</p>
-    </section>
-
-    <section class="content-section">
-        <h2>Detalles del Traje</h2>
-        <img src="images/spiderman-suit.jpg" alt="Traje de Spider-Man">
-        <p>El traje avanzado de Peter Parker en los juegos tiene un diseño moderno con el icónico logo blanco. También cuenta con mejoras tecnológicas, como los brazos mecánicos en la versión de Spider-Man 2. Además, a lo largo del juego, se pueden desbloquear múltiples trajes icónicos del universo Marvel.</p>
-    </section>
-
-    <section class="content-section">
-        <h2>Otros Personajes Importantes</h2>
-        <div class="character-section">
-            <div class="character">
-                <img src="images/miles-morales.jpg" alt="Miles Morales">
-                <h3>Miles Morales</h3>
-                <p>Miles es un joven que adquiere habilidades similares a las de Peter tras ser mordido por una araña modificada. En su propio juego, aprende a convertirse en un héroe y a dominar sus habilidades únicas como la invisibilidad y la explosión bioeléctrica "Venom Strike".</p>
-            </div>
-            <div class="character">
-                <img src="images/mary-jane.jpg" alt="Mary Jane Watson">
-                <h3>Mary Jane Watson</h3>
-                <p>Mary Jane es una periodista en el Daily Bugle que investiga los eventos que ocurren en Nueva York. En el juego, es una aliada clave para Peter, ayudándole a descubrir la verdad detrás de los enemigos que enfrentan.</p>
-            </div>
-            <div class="character">
-                <img src="images/venom.jpg" alt="Venom">
-                <h3>Venom</h3>
-                <p>Uno de los villanos principales en Marvel's Spider-Man 2. El simbionte se apodera de Harry Osborn y representa una de las mayores amenazas a las que se han enfrentado Peter y Miles.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="content-section">
-        <h2>Sorteo: Gana una PS5 con Marvel's Spider-Man 2</h2>
-        <p>¡Participa en nuestro sorteo para ganar una PlayStation 5 con Marvel's Spider-Man 2!</p>
-        <div class="countdown" id="countdown">00 días 00 horas 00 minutos 00 segundos</div>
-        <script>
-            function actualizarContador() {
-                const fechaObjetivo = new Date("2024-12-31T23:59:59").getTime();
-                setInterval(() => {
-                    const ahora = new Date().getTime();
-                    const diferencia = fechaObjetivo - ahora;
-
-                    if (diferencia > 0) {
-                        const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
-                        const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                        const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
-                        const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
-                        document.getElementById("countdown").innerHTML = `${dias} días ${horas} horas ${minutos} minutos ${segundos} segundos`;
-                    } else {
-                        document.getElementById("countdown").innerHTML = "¡El sorteo ha finalizado!";
-                    }
-                }, 1000);
-            }
-            actualizarContador();
-        </script>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Spider-Man Fans. Todos los derechos reservados.</p>
-    </footer>
+    
+    <div class="section">
+        <img src="spiderman-game.jpg" alt="Spider-Man Juego">
+        <p>Los juegos de Spider-Man para PS4 y PS5 han revolucionado la manera en que vivimos la experiencia del superhéroe. Con una historia emocionante y una jugabilidad fluida, seguimos la vida de Peter Parker y Miles Morales mientras enfrentan desafíos personales y amenazas como Kingpin, Mister Negative y el icónico Venom.</p>
+    </div>
+    
+    <div class="section">
+        <img src="peter-parker.jpg" alt="Peter Parker">
+        <p>Peter Parker, el Spider-Man original, es un héroe experimentado en estos juegos. Trabaja con el Dr. Otto Octavius y enfrenta numerosos desafíos, desde la traición de su mentor hasta la amenaza de los Seis Siniestros.</p>
+    </div>
+    
+    <div class="section">
+        <img src="miles-morales.jpg" alt="Miles Morales">
+        <p>Miles Morales es el segundo Spider-Man, con habilidades únicas como la bioelectricidad. Su historia muestra su crecimiento como héroe, enfrentando amenazas como el grupo Underground y su lucha por encontrar su propio camino.</p>
+    </div>
+    
+    <div class="section">
+        <img src="spiderman-suits.jpg" alt="Trajes de Spider-Man">
+        <p>Los trajes en estos juegos no solo son estéticamente impresionantes, sino que también brindan habilidades únicas. Peter y Miles pueden desbloquear trajes emblemáticos que ofrecen mejoras en combate, sigilo y movilidad.</p>
+    </div>
+    
+    <div class="section">
+        <img src="venom.jpg" alt="Venom">
+        <p>Venom es el villano final de Spider-Man 2, encarnado en Harry Osborn. Su presencia es devastadora, forzando a Peter y Miles a unir fuerzas para detener su amenaza mientras lidian con el impacto personal del simbionte.</p>
+    </div>
+    
+    <div class="section">
+        <h2>¡Sorteo de una PS5 con Spider-Man 2!</h2>
+        <p>Participa en nuestro sorteo y gana una PlayStation 5 con Marvel’s Spider-Man 2.</p>
+        <div class="countdown">00:00:00</div>
+    </div>
 </body>
 </html>
